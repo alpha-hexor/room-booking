@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/frontpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <title>Room Booking</title>
+</head>
+<body>
+
+    <div class="topnav">
+        {% if request.user.is_authenticated %}
+            <a href="logout">Logout</a>
+            <a href="status">Status</a>
+        {% else %}
+            <a href="login">Login</a>
+        {% endif %}
+        
+        <a class="active" href="#home">Home</a>
+      </div> 
+    <div id="center">
+        <span id="centerText" style="color: white;"><h1 style="float: left;">Hotel</h1></span>
+        <span id="centerText" style="color: rgb(131, 193, 247);"><h1 style="float: right;">&nbspBooking</h1></span>
+        <br>
+        <button id="button" onclick="window.location.href = 'booking';"><h3>Book Now</h3></button>
+    </div>
+</body>
+</html>
